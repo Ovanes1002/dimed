@@ -1,0 +1,32 @@
+.section {
+    padding-block: var(--section-padding-y);
+    &:nth-child(1) {
+        padding-block: 24px var(--section-padding-y);
+    }
+
+    &:last-child {
+        padding-bottom: 102px;
+
+        @include tablet {
+            padding-bottom: 90px;
+        }
+
+        @include mobile {
+            padding-bottom: 60px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 31px;
+
+        @include mobile {
+            margin-bottom: 21px;
+        }
+    }
+
+    &__title {
+        @include mobile {
+            line-height: 115%;
+        }
+    }
+}

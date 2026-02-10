@@ -1,0 +1,9 @@
+.route-and-soc1als {
+    @include flex-center;
+    column-gap: 13px;
+
+    @include mobile {
+        column-gap: 10px;
+        justify-content: space-between;
+    }
+}

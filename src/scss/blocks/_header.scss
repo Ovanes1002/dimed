@@ -1,0 +1,33 @@
+.header {
+    padding-block: 11px;
+    border-bottom: 1px solid var(--color-gray-alt);
+
+    @include mobile {
+        padding-block: 0;
+    }
+
+    &__inner {
+        @include flex-between;
+        padding-inline: 20px;
+        column-gap: 40px;
+
+        @include mobile {
+            padding-inline: 10px;
+        }
+    }
+
+    &__contacts {
+        @include flex-between;
+        column-gap: 26px;
+        &-phone {
+            font-style: normal;
+            padding-block: 15px;
+            @include hover {
+                color: var(--color-red);
+                transition: var(--transition);
+            }
+
+            @include fluid-text(18, 14);
+        }
+    }
+}

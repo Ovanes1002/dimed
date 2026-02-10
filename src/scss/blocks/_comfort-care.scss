@@ -1,0 +1,27 @@
+.comfort-care {
+    &__advantages {
+        &-list {
+            align-items: stretch;
+
+            @include mobile {
+                gap: 20px;
+                align-items: center;
+            }
+        }
+        &-item:nth-child(1) {
+            @include mobile {
+                .comfort-care-card {
+                    gap: 10px;
+                }
+            }
+        }
+    }
+
+    &__banner {
+        @include banner;
+
+        &-inner {
+            @include flex-center;
+        }
+    }
+}

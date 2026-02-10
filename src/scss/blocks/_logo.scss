@@ -1,0 +1,7 @@
+.logo {
+    &__image {
+        @include mobile {
+            max-width: 80%;
+        }
+    }
+}

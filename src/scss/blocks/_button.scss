@@ -1,0 +1,29 @@
+.button {
+    @include flex-center(true);
+    height: var(--button-height);
+    padding: 16px 24px;
+    color: var(--color-light);
+    border: var(--border);
+    border-radius: var(--border-radius-small);
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+
+    &--color-red {
+        background-color: var(--color-red);
+        &:hover {
+            background-color: var(--color-red-light);
+        }
+    }
+
+    &--color-blue {
+        background-color: var(--color-blue);
+        &:hover {
+            background-color: var(--color-blue-light);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

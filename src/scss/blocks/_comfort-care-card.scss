@@ -1,0 +1,27 @@
+.comfort-care-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--color-gray-light);
+    border-radius: var(--border-radius-medium-alt);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        padding: 22px 20px 24px 20px;
+
+        @include mobile {
+            row-gap: 11px;
+            padding: 21px 20px 20px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+    }
+
+    &__description {
+        line-height: 135%;
+    }
+}

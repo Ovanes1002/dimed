@@ -1,0 +1,53 @@
+.soc1als {
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        column-gap: 13px;
+
+        @include tablet {
+            justify-content: space-between;
+        }
+    }
+
+    &__whatsapp {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-image: url("../icons/whatsapp-bg.svg");
+        background-size: 40px 40px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        color: var(--color-light);
+        @include hover {
+            background-image: url("../icons/whatsapp-bg-hover.svg");
+        }
+        svg {
+            @include abs-center;
+        }
+    }
+
+    &__item {
+        padding: 5px;
+    }
+
+    &__link {
+        &-icon-wrapper {
+            @include flex-center;
+            @include square(41px);
+            background-color: transparent;
+            svg {
+                --start-color: #1faf38;
+                --end-color: #1faf38;
+                color: var(--color-light);
+                transition: var(--transition);
+                @include hover {
+                    --start-color: #60d669; /* изменённый цвет для начала градиента при наведении */
+                    --end-color: #60d669;
+                }
+            }
+        }
+    }
+}

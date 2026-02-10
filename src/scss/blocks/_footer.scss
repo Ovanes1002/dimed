@@ -1,0 +1,136 @@
+.footer {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 100px;
+        padding: 47px 48px 48px;
+        color: var(--color-light);
+        background-color: var(--color-blue);
+
+        @include tablet {
+            padding: 40px 30px;
+            column-gap: 40px;
+        }
+        @include mobile-above {
+            border-radius: var(--border-radius-large-alt) var(--border-radius-large-alt) 0 0;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            border-radius: var(--border-radius-medium-alt) var(--border-radius-medium-alt) 0 0;
+            padding: 32px 20px 100px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            display: contents;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        gap: 20px;
+
+        &-body {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 26px 21px;
+            margin-top: 33px;
+            font-style: normal;
+
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+
+            @include mobile {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &__image {
+        border-radius: 44px !important;
+        overflow: hidden;
+
+        @include tablet {
+            width: 50%;
+        }
+
+        @include mobile {
+            order: 1;
+            width: 100%;
+        }
+
+        iframe {
+            @include desktop {
+                height: 100%;
+            }
+            @include mobile {
+                width: 100%;
+                height: 220px;
+            }
+        }
+    }
+
+    &__contact-item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 7px;
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            .footer__contact-item-value {
+                font-size: 18px;
+            }
+        }
+
+        @include tablet {
+            &:nth-child(1) {
+                order: 4;
+            }
+            &:nth-child(2) {
+                order: 2;
+            }
+            &:nth-child(3) {
+                order: 1;
+            }
+            &:nth-child(4) {
+                order: 3;
+            }
+        }
+        &-label {
+            font-weight: 600;
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__soc1als {
+        margin-top: 24px;
+        padding-right: 14px;
+
+        @include tablet {
+            padding-right: 0;
+        }
+
+        @include mobile {
+            order: 2;
+            margin-top: 18px;
+        }
+    }
+
+    &__copyright {
+        margin-top: 12px;
+        font-size: 14px;
+
+        @include mobile {
+            order: 2;
+            margin-top: 27px;
+        }
+    }
+}

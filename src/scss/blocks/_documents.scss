@@ -1,0 +1,108 @@
+.documents {
+    &__list {
+        @include mobile {
+            gap: 16px;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        padding: 18px 18px 15px 20px;
+        border-radius: var(--border-radius-medium);
+        background-color: var(--color-gray-light);
+        transition: var(--transition);
+
+        &:hover {
+            color: var(--color-light);
+            cursor: pointer;
+            background-color: var(--color-blue);
+
+            .documents__link-text {
+                color: var(--color-light);
+                transition: var(--transition);
+            }
+
+            .documents__link-arrow {
+                color: var(--color-light);
+            }
+        }
+
+        &:nth-child(1),
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(7) {
+            @include mobile {
+                order: -1;
+            }
+        }
+
+        &:nth-child(4) {
+            width: 100%;
+            line-height: 120%;
+        }
+
+        @include mobile {
+            padding: 12px 19px 10px 20px;
+            border-radius: var(--border-radius-small);
+        }
+    }
+
+    &__link {
+        @include flex-between;
+        width: 100%;
+        column-gap: 15px;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 14px;
+        }
+
+        &-content {
+            @include flex-between;
+            width: 100%;
+            column-gap: 76px;
+            @include mobile {
+                // justify-content: flex-start;
+                flex-grow: 1;
+                column-gap: 30px;
+            }
+        }
+
+        &-icon-wrapper {
+            @include flex-center;
+            @include square(48px);
+            flex-shrink: 0;
+            border-radius: 10px;
+            background-color: var(--color-red);
+            @include mobile {
+                @include square(30px);
+            }
+            svg {
+                color: var(--color-light);
+                @include mobile {
+                    width: 14px;
+                    height: 17px;
+                }
+            }
+        }
+
+        &-text {
+            &--margin-right {
+                margin-right: 80px;
+            }
+        }
+
+        &-arrow {
+            color: var(--color-red);
+
+            @include mobile {
+                svg {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+    }
+}

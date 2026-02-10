@@ -1,0 +1,51 @@
+.mobile-controls {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    margin-bottom: -2px;
+    border-radius: 28px 28px 0 0;
+    outline: 1px solid rgba($color: #f0f0f0, $alpha: 0.6);
+    outline-offset: -1px;
+    font-size: 12px;
+    background-color: var(--color-light);
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 7px 0 10px 0;
+
+        &:nth-child(1) {
+            border-top-left-radius: 28px;
+            color: var(--color-light);
+            background-color: var(--color-blue);
+            svg {
+                color: var(--color-blue);
+            }
+        }
+
+        &:not(:first-child) {
+            border-left: 1px solid rgba($color: #f0f0f0, $alpha: 0.6);
+        }
+    }
+
+    &__icon-wrapper {
+        @include flex-center;
+        @include square(38px);
+        border-radius: 50%;
+        background-color: var(--color-light);
+    }
+
+    &__link,
+    &__top {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

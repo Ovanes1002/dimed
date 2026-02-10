@@ -1,0 +1,45 @@
+.icon {
+    position: relative;
+    display: block;
+    transition: var(--transition);
+
+    @include square(40px);
+
+    &--whatsapp,
+    &--telegram,
+    &--max {
+        background-size: contain;
+        background-position: center;
+
+        @include square(40px);
+        @include hover {
+            transition: var(--transition);
+            background-size: contain;
+            background-position: center;
+            cursor: pointer;
+
+            @include square(40px);
+        }
+    }
+
+    &--whatsapp {
+        background: center / contain no-repeat url("../icons/socials/WhatsApp.svg");
+        @include hover {
+            background: center / contain no-repeat url("../icons/socials/WhatsApp-hover.svg");
+        }
+    }
+
+    &--telegram {
+        background: center / contain no-repeat url("../icons/socials/telegram.svg");
+        @include hover {
+            background: center / contain no-repeat url("../icons/socials/telegram-hover.svg");
+        }
+    }
+
+    &--max {
+        background: center / contain no-repeat url("../icons/socials/max.svg");
+        @include hover {
+            background: center / contain no-repeat url("../icons/socials/max-hover.svg");
+        }
+    }
+}
